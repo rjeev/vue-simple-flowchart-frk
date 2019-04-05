@@ -38,7 +38,7 @@ export default {
             id: 2,
             x: -700,
             y: -69,
-            type: '<div style="background-color:red;">Action</div>',
+            type: '<div>Action</div>',
             label: 'test1',
           },
           {
@@ -47,6 +47,7 @@ export default {
             y: 80,
             type: 'Script',
             label: 'test2',
+            typeBgColor: 'green' 
           },
           {
             id: 6,

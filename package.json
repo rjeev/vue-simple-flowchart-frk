@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-flowchart-local",
-  "version": "0.1.8",
+  "version": "0.0.1",
   "private": false,
   "main": "./dist/vue-flowchart.common.js",
   "files": [
@@ -50,6 +50,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jeffreyrn/vue-simple-flowchart"
+    "url": "https://github.com/rjeev/vue-simple-flowchart-frk"
   }
 }

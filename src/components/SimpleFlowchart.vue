@@ -127,10 +127,10 @@ export default {
     },
     getPortPosition(type, x, y) {
       if (type === 'top') {
-        return [x + 150, y];
+        return [x + 175, y];
       }
       else if (type === 'bottom') {
-        return [x + 150, y + 100];
+        return [x + 175, y + 150];
       }
     },
     linkingStart(index) {

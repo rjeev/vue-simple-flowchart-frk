@@ -9,7 +9,7 @@
        @mouseup="inputMouseUp">
     </div>
     <div class="node-main">
-      <div v-html="type" class="node-type"></div>
+      <div v-html="type" class="node-type" :style="'background-color:'+typeBgColor"></div>
       <div v-html="label" class="node-label"></div>
     </div>
     <div class="node-port node-output" 
@@ -46,6 +46,10 @@ export default {
     type: {
       type: String,
       default: 'Default'
+    },
+    typeBgColor: {
+      type: String,
+      default: '#4EC0DB'
     },
     label: {
       type: String,
@@ -117,8 +121,8 @@ $portSize: 12;
 
 .flowchart-node {
   margin: 0;
-  width: 300px;
-  height: 100px;
+  width: 350px;
+  height: 150px;
   position: absolute;
   box-sizing: border-box;
   border: none;
@@ -132,11 +136,12 @@ $portSize: 12;
     .node-type {
       background: $themeColor;
       color: white;
-      font-size: 13px;
+      font-size: 15px;
       padding: 6px;
+      font-weight:bold;
     }
     .node-label {
-      font-size: 13px;
+      font-size: 15px;
     }
   }
   .node-port {
