@@ -121,8 +121,8 @@ $portSize: 12;
 
 .flowchart-node {
   margin: 0;
-  width: 350px;
-  height: 150px;
+  width: 250px;
+  height: 100px;
   position: absolute;
   box-sizing: border-box;
   border: none;
