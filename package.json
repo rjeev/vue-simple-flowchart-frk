@@ -1,5 +1,5 @@
 {
-  "name": "vue-simple-flowchart-local",
+  "name": "vue-simple-flowchart-frk",
   "version": "0.0.1",
   "private": false,
   "main": "./dist/vue-flowchart.common.js",
