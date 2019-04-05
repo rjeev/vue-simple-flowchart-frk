@@ -131,6 +131,7 @@ $portSize: 12;
   opacity: .9;
   cursor: move;
   transform-origin: top left;
+  border: 2px solid #eee;
   .node-main {
     text-align: center;
     .node-type {
