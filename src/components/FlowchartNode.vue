@@ -4,16 +4,13 @@
     @mouseover="handleMouseOver"
     @mouseleave="handleMouseLeave"
     v-bind:class="{selected: options.selected === id}">
-    <div class="node-port node-input"
-       @mousedown="inputMouseDown"
-       @mouseup="inputMouseUp">
+    <div class="node-port node-input">
     </div>
     <div class="node-main">
       <div v-html="type" class="node-type" :style="'background-color:'+typeBgColor"></div>
       <div v-html="label" class="node-label"></div>
     </div>
-    <div class="node-port node-output" 
-      @mousedown="outputMouseDown">
+    <div class="node-port node-output">
     </div>
   </div>
 </template>
