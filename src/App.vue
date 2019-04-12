@@ -40,6 +40,7 @@ export default {
             y: -69,
             type: '<div>Action</div>',
             label: 'test1',
+            popover: 'this is a test'
           },
           {
             id: 4,

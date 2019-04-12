@@ -3,7 +3,7 @@
     @mousedown="handleMousedown"
     @mouseover="handleMouseOver"
     @mouseleave="handleMouseLeave"
-    v-bind:class="{selected: options.selected === id}">
+    v-bind:class="{selected: options.selected === id}" data-toggle="popover" data-placement="top" :data-content="popover">
     <div class="node-port node-input">
     </div>
     <div class="node-main">
@@ -47,6 +47,9 @@ export default {
     typeBgColor: {
       type: String,
       default: '#4EC0DB'
+    },
+    popover: {
+      type: String
     },
     label: {
       type: String,
