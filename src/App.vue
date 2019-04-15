@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1> simple flowchart</h1>
+
     <div class="tool-wrapper">
       <select v-model="newNodeType">
         <option v-for="(item, index) in nodeCategory" :key="index" :value="index">{{item}}</option>
@@ -15,7 +16,7 @@
       @linkBreak="linkBreak"
       @linkAdded="linkAdded"
       @canvasClick="canvasClick"
-      :height="900"/>
+      :height="1900"/>
   </div>
 </template>
 
@@ -48,7 +49,8 @@ export default {
             y: 80,
             type: 'Script',
             label: 'test2',
-            typeBgColor: 'green' 
+            typeBgColor: 'green',
+            popover: 'this is a test'
           },
           {
             id: 6,
@@ -56,6 +58,7 @@ export default {
             y: 80,
             type: 'Rule',
             label: '<div style="margin-top:20px;color:red;">test3</div>',
+            popover: 'this is a test \nsdfdsfdsfsdf'
           }
         ],
         links: [
@@ -106,6 +109,8 @@ export default {
     linkAdded(link) {
       console.log('new link added:', link);
     }
+  },
+  created () {
   }
 }
 </script>
@@ -119,7 +124,7 @@ export default {
   color: #2c3e50;
   margin: 0;
   overflow: hidden;
-  height: 800px;
+  height: 4000px;
   .tool-wrapper {
     position: relative;
   }

@@ -3,10 +3,10 @@
     @mousedown="handleMousedown"
     @mouseover="handleMouseOver"
     @mouseleave="handleMouseLeave"
-    v-bind:class="{selected: options.selected === id}" data-toggle="popover" data-placement="top" :data-content="popover">
+    v-bind:class="{'tip': true,'selected': options.selected === id}">
     <div class="node-port node-input">
     </div>
-    <div class="node-main">
+    <div class="node-main" :data-title="popover">
       <div v-html="type" class="node-type" :style="'background-color:'+typeBgColor"></div>
       <div v-html="label" class="node-label"></div>
     </div>
@@ -186,5 +186,37 @@ $portSize: 12;
 }
 .selected {
   box-shadow: 0 0 0 2px $themeColor;
+}
+[data-title] {
+  outline: red dotted 1px; /*optional styling*/
+  font-size: 30px; /*optional styling*/
+  
+  position: relative;
+  cursor: help;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  top: -26px;
+  left:0px;
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 2px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  font-family: sans-serif;
+  white-space: nowrap;
+}
+[data-title]:hover::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  display: inline-block;
+  color: #fff;
+  border: 8px solid transparent;  
+  border-top: 8px solid #000;
 }
 </style>
