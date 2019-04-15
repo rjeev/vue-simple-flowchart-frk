@@ -188,11 +188,7 @@ $portSize: 12;
   box-shadow: 0 0 0 2px $themeColor;
 }
 [data-title] {
-  outline: red dotted 1px; /*optional styling*/
-  font-size: 30px; /*optional styling*/
-  
-  position: relative;
-  cursor: help;
+  position: relative; 
 }
 
 [data-title]:hover::before {
